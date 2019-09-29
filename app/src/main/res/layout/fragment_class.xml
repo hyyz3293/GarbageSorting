@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/test_test"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/class_setting"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_round_voice"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+
+    <TextView
+        android:id="@+id/class_new"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_round_voice"
+        android:gravity="center"
+        android:text="新首页"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+</RelativeLayout>

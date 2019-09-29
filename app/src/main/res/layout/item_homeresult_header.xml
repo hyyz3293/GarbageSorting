@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:text="搜索结果"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/home_header_del"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="45dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@mipmap/icon_home_header_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

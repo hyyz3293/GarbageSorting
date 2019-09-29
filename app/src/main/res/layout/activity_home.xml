@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.HomeActivity">
+
+
+    <View
+        android:id="@+id/home_bg_lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <TextView
+        android:id="@+id/tvStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/ll_tops"
+        android:layout_below="@id/tvStatusBar"
+        android:background="#82C462"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="23sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="垃圾分类宝"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_home_setting"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="1288-settings.json"
+            app:lottie_loop="true" />
+
+    </RelativeLayout>
+
+    <com.tool.rss.ui.widget.ShadowLayoutTwo
+        android:id="@+id/search_rel"
+        android:layout_below="@id/tvStatusBar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shadowColor="#6682C462"
+        app:shadowDx="0dp"
+        app:shadowDy="4dp"
+        app:shadowRadius="10dp"
+        app:shadowRadiusLeft="10dp"
+        app:shadowRadiusRight="10dp"
+        app:shadowRadiusTop="5dp"
+        app:shadowRadiusButtom="5dp"
+        app:shadowSide="all">
+
+        <RelativeLayout
+            android:background="@drawable/bg_home_white25"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/home_t_search"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/icon_search" />
+
+            <com.tool.rss.ui.widget.view.LastInputEditText
+                android:id="@+id/et_search"
+                android:textCursorDrawable="@drawable/home_edit_cursor"
+                android:hint="请输入垃圾名称"
+                android:textColorHint="#CCCCCC"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:lines="1"
+                android:layout_toRightOf="@id/home_t_search"
+                android:layout_toLeftOf="@id/home_t_photo"
+                android:gravity="center_vertical"
+                android:background="@null"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/home_t_photo"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/icon_photo"
+                android:layout_marginEnd="20dp" />
+
+        </RelativeLayout>
+
+
+    </com.tool.rss.ui.widget.ShadowLayoutTwo>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_tips"
+        android:layout_below="@id/search_rel"
+        android:overScrollMode="never"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_type"
+        android:overScrollMode="never"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/recycler_tips"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_result"
+        android:overScrollMode="never"
+        android:background="@color/white"
+        android:layout_below="@id/recycler_tips"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/home_down_sound_img"
+            android:background="@mipmap/icon_down_sound"
+            android:layout_width="79dp"
+            android:layout_height="79dp" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/home_down_sound_lottie"
+            android:visibility="gone"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="voice-recognition.json"
+            app:lottie_loop="true" />
+        <TextView
+            android:id="@+id/home_down_sound_tips"
+            android:layout_marginTop="23dp"
+            android:textSize="23dp"
+            android:textColor="#999999"
+            android:text="按下说话"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

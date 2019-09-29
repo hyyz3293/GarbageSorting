@@ -1,0 +1,117 @@
+<resources>
+
+
+    <!-- Base application the App主题样式-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:divider">@drawable/shape_divider</item>
+        <item name="android:listDivider">@drawable/shape_divider</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="AppStartTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--冷启动时间更慢 但是点击图标是立即打开视觉效果-->
+        <!--android:theme="@android:style/Theme.NoTitleBar.Fullscreen"-->
+        <item name="android:windowBackground">@mipmap/test_test</item>
+    </style>
+
+    <!--页面转场侧滑效果 登录页-->
+    <style name="ActivitySlideForLogin" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_slide_in_from_bottom</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_slide_out_to_bottom</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!-- 全屏对话框 -->
+    <style name="FullScreenDialog">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- 全屏对话框(背景透明) -->
+    <style name="FullScreenDialogTrans" parent="FullScreenDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="UserBottomLLStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/selector_btn_bg_white</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="UserBottomImgStyle">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+
+    <style name="UserBottomTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="UserBottomBackStyle">
+        <item name="android:layout_width">11dp</item>
+        <item name="android:layout_height">11dp</item>
+    </style>
+
+    <style name="UserBottomPointStyle">
+        <item name="android:layout_width">9dp</item>
+        <item name="android:layout_height">9dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+
+    <!-- IosPopupDialog start -->
+    <!-- 样式 -->
+    <style name="IosPopupDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 标题 -->
+    <style name="IosPopuppDialogTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/ios_popup_dialog_margin_title</item>
+        <item name="android:layout_marginRight">@dimen/ios_popup_dialog_margin_title</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 底部按钮 -->
+    <style name="IosPopupDialogButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/ios_popup_dialog_height_button</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/ios_popup_dialog_blue</item>
+        <item name="android:textSize">@dimen/ios_popup_dialog_button_text_size</item>
+    </style>
+    <!-- IosPopupDialog end -->
+
+</resources>

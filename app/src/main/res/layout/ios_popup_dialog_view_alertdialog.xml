@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root_view"
+    android:layout_width="@dimen/ios_popup_dialog_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ios_popup_dialog_bg"
+    android:orientation="vertical">
+
+    <!-- 标题 -->
+    <FrameLayout
+        android:id="@+id/fl_top"
+        style="@style/IosPopuppDialogTitle">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="title"/>
+
+    </FrameLayout>
+
+    <!-- 内容 -->
+    <FrameLayout
+        android:id="@+id/fl_center"
+        style="@style/IosPopuppDialogTitle"
+        android:layout_marginTop="10dp"
+        >
+
+        <!-- 控制单行居中, 多行偏左 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.3"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                tools:text="1. 这是第一点\n2. 这是第二点这是第二点\n3. 这是第三点这是第三点这是第三点"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <!-- 横向分割线 -->
+    <View
+        android:id="@+id/v_division_hor"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/ios_popup_dialog_line"/>
+
+    <!-- 底部两个按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/ios_popup_dialog_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <!-- 取消 -->
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@drawable/ios_popup_dialog_left_selector"
+            android:textColor="@drawable/selector_tv_gary_666"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="left"/>
+
+        <!-- 确认 -->
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:background="@drawable/ios_popup_dialog_right_selector"
+            android:textColor="@drawable/selector_tv_orange"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            tools:text="right"/>
+
+    </LinearLayout>
+
+</LinearLayout>

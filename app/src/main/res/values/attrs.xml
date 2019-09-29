@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipePanel">
+        <attr name="leftSwipeColor" format="color" />
+        <attr name="topSwipeColor" format="color" />
+        <attr name="rightSwipeColor" format="color" />
+        <attr name="bottomSwipeColor" format="color" />
+        <attr name="leftEdgeSize" format="dimension" />
+        <attr name="topEdgeSize" format="dimension" />
+        <attr name="rightEdgeSize" format="dimension" />
+        <attr name="bottomEdgeSize" format="dimension" />
+        <attr name="leftDrawable" format="reference" />
+        <attr name="topDrawable" format="reference" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="bottomDrawable" format="reference" />
+        <attr name="isLeftCenter" format="boolean" />
+        <attr name="isTopCenter" format="boolean" />
+        <attr name="isRightCenter" format="boolean" />
+        <attr name="isBottomCenter" format="boolean" />
+        <attr name="isLeftEnabled" format="boolean" />
+        <attr name="isTopEnabled" format="boolean" />
+        <attr name="isRightEnabled" format="boolean" />
+        <attr name="isBottomEnabled" format="boolean" />
+    </declare-styleable>
+
+    <!-- ShadowLayout 阴影 -->
+    <declare-styleable name="ShadowLayout">
+        <attr name="shadowColor" format="color"/>
+        <attr name="shadowRadius" format="dimension"/>
+        <attr name="shadowRadiusLeft" format="dimension"/>
+        <attr name="shadowRadiusRight" format="dimension"/>
+        <attr name="shadowRadiusTop" format="dimension"/>
+        <attr name="shadowRadiusButtom" format="dimension"/>
+        <attr name="shadowDx" format="dimension"/>
+        <attr name="shadowDy" format="dimension"/>
+        <attr name="shadowShape">
+            <flag name="rectangle" value="0x0001"/>
+            <flag name="oval" value="0x0010"/>
+        </attr>
+        <attr name="shadowSide">
+            <flag name="all" value="0x1111"/>
+            <flag name="left" value="0x0001"/>
+            <flag name="top" value="0x0010"/>
+            <flag name="right" value="0x0100"/>
+            <flag name="bottom" value="0x1000"/>
+        </attr>
+    </declare-styleable>
+</resources>

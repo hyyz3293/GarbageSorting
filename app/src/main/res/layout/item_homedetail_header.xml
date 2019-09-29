@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.tool.rss.ui.widget.ShadowLayoutTwo
+        android:id="@+id/sha_lay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shadowColor="#1A333333"
+        app:shadowDx="0dp"
+        app:shadowDy="4dp"
+        app:shadowRadius="10dp"
+        app:shadowRadiusLeft="5dp"
+        app:shadowRadiusRight="5dp"
+        app:shadowRadiusTop="5dp"
+        app:shadowRadiusButtom="10dp"
+        app:shadowSide="all">
+
+        <LinearLayout
+            android:background="@drawable/bg_home_white10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:paddingTop="25dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="25dp"
+            android:paddingRight="40dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/detail_tile_img"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp" />
+                <TextView
+                    android:id="@+id/detail_content"
+                    android:textStyle="bold"
+                    android:text="111111111111"
+                    android:layout_marginLeft="13dp"
+                    android:textSize="17sp"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_content"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </com.tool.rss.ui.widget.ShadowLayoutTwo>
+
+</LinearLayout>

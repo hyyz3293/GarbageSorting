@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tool.rss">
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- 友盟必须的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- 配置权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 如果使用积分墙广告,还需要配置下面权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" /> <!-- 以下为可选权限 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <application
+        android:name=".RkApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_ax"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_ax"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- 百度语音 start -->
+        <meta-data android:name="com.baidu.speech.APP_ID"
+            android:value="16701350" />
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="3Mdxz9BWCN4cEnrS7hSUlKqK" />
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="YAu1z7DXG1nSLMCmP5IjKG82MGpe5WAp" />
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false" />
+        <!-- 百度语音 end -->
+
+        <!-- 友盟统计start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5d1d7566570df3611f000f56" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- 友盟统计end -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".ui.activity.WelcomeActivity"
+            android:theme="@style/AppStartTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="主页"
+            android:theme="@style/AppTheme"
+            android:name=".ui.activity.MainActivity" />
+        <activity
+            android:label="主页"
+            android:theme="@style/AppTheme"
+            android:name=".ui.activity.HomeActivity" />
+        <activity
+            android:label="设置"
+            android:theme="@style/AppTheme"
+            android:name=".ui.activity.SettingActivity" />
+        <activity
+            android:label="版本信息"
+            android:theme="@style/AppTheme"
+            android:name=".ui.activity.AppInfoActivity" />
+        <activity
+            android:label="详情"
+            android:theme="@style/AppTheme"
+            android:name=".ui.activity.RefuseDetailActivity" />
+    </application>
+
+</manifest>

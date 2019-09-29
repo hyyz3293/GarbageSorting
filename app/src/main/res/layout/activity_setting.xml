@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/camera_back_toolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:src="@mipmap/icon_new_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="设置"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_setting_app_info"
+        style="@style/UserBottomLLStyle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="版本信息"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_setting_red_point"
+            style="@style/UserBottomPointStyle"
+            android:src="@drawable/bg_round_red"/>
+
+        <ImageView
+            android:src="@mipmap/ic_user_back"
+            style="@style/UserBottomBackStyle"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_setting_app_comment"
+        style="@style/UserBottomLLStyle"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="评价App"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            style="@style/UserBottomPointStyle"
+            android:src="@drawable/bg_round_red"/>
+
+        <ImageView
+            android:src="@mipmap/ic_user_back"
+            style="@style/UserBottomBackStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

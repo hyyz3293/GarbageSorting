@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/top_rel">
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--android:id="@+id/fragment_home_animation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:lottie_fileName="bg_home.json"-->
+        <!--app:lottie_loop="true"-->
+        <!--app:lottie_autoPlay="true" />-->
+
+    <View
+        android:id="@+id/home_bg_lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rel_search"
+        android:background="@drawable/shape_round_rec_light_gary_btn_bg"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.tool.rss.ui.widget.view.LastInputEditText
+            android:id="@+id/et_search"
+            android:gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_search_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rel_search"
+        android:id="@+id/audio_start"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_round_voice"
+        android:layout_centerInParent="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/home_lottie"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="voice-recognition.json"
+            app:lottie_loop="true" />
+
+        <ImageView
+            android:id="@+id/home_voice"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/icon_voice_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/error_tip"
+        android:visibility="gone"
+        android:layout_below="@id/audio_start"
+        android:textSize="16sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textColor="#88FF0000"
+        android:gravity="center"
+        android:text="对不起，暂时无法查询到该垃圾的分类结果"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview_home"
+        android:layout_below="@id/error_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/tip_search"
+        android:layout_below="@+id/error_tip"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:textSize="16sp"
+            android:textColor="@color/font_666666"
+            android:text="你想搜索什么呢？"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light_gary"
+    android:orientation="vertical"
+    android:id="@+id/rootLayout"
+    tools:context=".ui.activity.AppInfoActivity">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvStatusBar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+            <ImageView
+                android:id="@+id/camera_back_toolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:src="@mipmap/icon_new_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="版本信息"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@mipmap/ic_launcher"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:textColor="#333333"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:id="@+id/tv_app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="v1.0.0"
+            android:textSize="15sp"
+            android:textColor="#666666"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_check_update"
+            android:layout_width="115dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="检查更新"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:background="@drawable/shape_round_rec_orage_btn_bg"
+            android:layout_marginTop="25dp"
+            android:textColor="@drawable/selector_tv_orange"
+            android:clickable="true"
+            android:focusable="true"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_app_info_bottom"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="v1.0.0"
+        android:textSize="10sp"
+        android:textColor="#999999"
+        android:layout_marginBottom="30dp"
+        />
+</LinearLayout>

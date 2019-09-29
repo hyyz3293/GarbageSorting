@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvStatusBar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textx"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:paddingStart="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/top_rels"
+        android:layout_below="@id/tvStatusBar"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="167dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="77dp">
+
+            <TextView
+                android:id="@+id/detial_refuse_title"
+                android:textColor="@color/white"
+                android:textSize="23sp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:paddingLeft="20dp"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:paddingStart="20dp" />
+
+            <LinearLayout
+                android:id="@+id/detail_close"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:background="@mipmap/icon_close"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/ic_banner_bottom"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerdetail"
+        android:overScrollMode="never"
+        android:layout_below="@id/textx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

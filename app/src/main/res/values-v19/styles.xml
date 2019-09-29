@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppStartTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--冷启动时间更慢 但是点击图标是立即打开视觉效果-->
+        <item name="android:windowBackground">@mipmap/test_test</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>
