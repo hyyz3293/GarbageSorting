@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.umeng.umsdk:analytics:7.5.4@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.umeng.umsdk/analytics/7.5.4/986a8bdccabb02a57943f857b5522a77e184e590/analytics-7.5.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.umeng.umsdk/analytics/7.5.4/405668dbd1053a6bd88b81b942e8203f1ae3e450/analytics-7.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
